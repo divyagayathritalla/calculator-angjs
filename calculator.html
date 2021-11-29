@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <script src="angular.min.js"></script>
+  <script src="calculator.js"></script>
+  <!--<script src="angular.min.js"></script>-->
+
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+
+<body  ng-controller="myCtrl">
+  
+    <div id="container">
+      <div id="calculator">
+        <div id="display">
+          <div id="previous">
+            <p id="previousvalue">{{preNum}}</p>
+          </div>
+          <div id="output">
+            <p id="output-value">{{displayNum}}</p>
+          </div>
+        </div>
+        <div class="calcbuttons">
+          <button class="operator" ng-click="allClear()">C</button>
+          <button class="operator" ng-click="clearOne()">CE</button>
+          <button class="operator" ng-click="operator('%')">%</button>
+          <button class="operator" ng-click="operator('/')">/</button>
+          <button class="number" ng-click="enterNum(7)">7</button>
+          <button class="number" ng-click="enterNum(8)">8</button>
+          <button class="number" ng-click="enterNum(9)">9</button>
+          <button class="operator" ng-click="operator('x')">x</button>
+          <button class="number" ng-click="enterNum(4)">4</button>
+          <button class="number" ng-click="enterNum(5)">5</button>
+          <button class="number" ng-click="enterNum(6)">6</button>
+          <button class="operator" ng-click="operator('-')">-</button>
+          <button class="number" ng-click="enterNum(1)">1</button>
+          <button class="number" ng-click="enterNum(2)">2</button>
+          <button class="number" ng-click="enterNum(3)">3</button>
+          <button class="operator" ng-click="operator('+')">+</button>
+          <button class="empty"> </button>
+          <button class="number" ng-click="enterNum(0)">0</button>
+          <button class="number" ng-click="enterNum('.')">.</button>
+          <button class="operator" id="equal" ng-click="getResult()">=</button>
+
+        </div>
+      </div>
+      </div>
+  
+</body>
+
+</html>
